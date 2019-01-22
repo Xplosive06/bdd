@@ -12,8 +12,6 @@ Hi, Welcome in my AMAZING app where you can save emails from french town halls. 
 
 If you want to check if the Google Spreadsheet worked, go to : https://docs.google.com/spreadsheets/d/1pz_txPkFK2ToS0k5T-4oE4ULFfhCv75lK0wnOSl4qrQ/edit#gid=0
 
-The spreadsheet should be empty, if it's not, just use your mouse and erase all the content.
+The spreadsheet should be empty, if it's not, just use your mouse and erase all the content
 
-If there is a problem to save in Json/CSV
-
-Go in the main directory's app to lib/ and remove all the files.
+If there is a problem to save in Json/CSV, go in the main directory's app to lib/ and remove all the files
