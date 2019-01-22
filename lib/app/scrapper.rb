@@ -50,13 +50,18 @@ class Scrapper
     #google_hash = perform
     i = 0
     hash_test = perform
+    #We only use perform once by created a new hash
     ws = session.spreadsheet_by_key("1pz_txPkFK2ToS0k5T-4oE4ULFfhCv75lK0wnOSl4qrQ").worksheets[0]
+    #Using the key of our spreadsheet's URL
     hash_test.each do |key, value|
       i += 1
       ws[i, 1] = key
+      #first column
       ws[i, 2] = value
+      #second column
     end
     ws.save
+    #without ws.save there is no change on your actual spreadsheet
 
   end
 
