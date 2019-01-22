@@ -1,7 +1,8 @@
-Hi, Welcome in my AMZING app where you can save emails from french town halls. WOOWWW. CRAZY.
+Hi, Welcome in my AMAZING app where you can save emails from french town halls. WOOWWW. CRAZY.
 
 1- Download my repo
-2- With your terminal, go in the main directory.
+2- With your terminal, go in the main directory(bdd).
+3- Terminal: bundle install
 3- Terminal: ruby app.rb
 4- Follow the prompt
 
