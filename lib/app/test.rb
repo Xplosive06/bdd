@@ -1,6 +1,15 @@
-class Scrapper
+require 'pry'
+require 'rubocop'
+require 'rspec'
+require 'dotenv'
+require 'nokogiri'
+require 'json'
+require 'csv'
+require 'google_drive'
 
-  def get_cities_names
+
+
+def get_cities_names
     cities_array = Array.new
     page = Nokogiri::HTML(open("http://annuaire-des-mairies.com/val-d-oise"))
     #The page where to scrap all the cities names.
@@ -42,7 +51,7 @@ class Scrapper
   end
 
   def to_json
-    File.write("db/email.JSON",json_hash.to_json)
+    File.write("../../db/email.JSON",perform.to_json)
   end
 
   def save_as_spreadsheet
@@ -63,7 +72,7 @@ class Scrapper
   def save_as_csv
     csv_hash = perform
     #We only use perform once by created a new hash
-    CSV.open("db/email.csv", "w") do |csv|
+    CSV.open("../../db/email.csv", "w") do |csv|
       #CSV.open("data2.csv", "a") {|csv| perform.each {|elem| csv << elem} }
       csv << csv_hash.values
       #first row
@@ -72,25 +81,4 @@ class Scrapper
     end
   end
 
-  def choose_a_saving
-    puts "Choisissez une manière de sauvegarder: "
-    puts "Sauvegarder en format Json: (1)"
-    puts "Sauvegarder en format Spreadsheet: (2)"
-    puts "Sauvegarder en format CSV: (3)"
-
-    choice = gets.to_i
-
-    if choice == 1
-      to_json
-    elsif choice == 2
-      save_as_spreadsheet
-    elsif choice == 3
-      save_as_csv
-    end
-
-
-  end
-
-  private :get_cities_names, :get_cities_emails
-
-end
+save_as_csv
