@@ -42,7 +42,7 @@ class Scrapper
   end
 
   def to_json
-    File.write("db/email.JSON",json_hash.to_json)
+    File.write("db/email.JSON",perform.to_json)
   end
 
   def save_as_spreadsheet
