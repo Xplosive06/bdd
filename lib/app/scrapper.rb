@@ -73,10 +73,10 @@ class Scrapper
   end
 
   def choose_a_saving
-    puts "Choisissez une manière de sauvegarder: "
-    puts "Sauvegarder en format Json: (1)"
-    puts "Sauvegarder en format Spreadsheet: (2)"
-    puts "Sauvegarder en format CSV: (3)"
+    puts "Choose a way of saving: "
+    puts "Save in Json: (1)"
+    puts "Save in Google Spreadsheet: (2)"
+    puts "Save in CSV: (3)"
 
     choice = gets.to_i
 
